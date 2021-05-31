@@ -1,0 +1,86 @@
+mat-sidenav{
+      width: 280px;
+      padding: 15px;
+
+  }
+  .mat-drawer {
+      background-color:#4285f4;
+      color: white;
+  }
+  .main-content{
+      padding: 20px;
+
+  }
+  .toolbar-spacer{
+flex:1 1 auto;
+  }
+  
+  mat-toolbar{
+      background-color:#4285f4;
+      height: 65px;
+  }
+   .mat-icon-button.cdk-program-focused .mat-button-focus-overlay {
+    opacity: 0;
+  }
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    z-index: 2;
+  }
+  .example-is-mobile .example-sidenav-container {
+    flex: 1 0 auto;
+    height: -webkit-fill-available;
+  }
+  .a-list-item:focus {
+    outline: none;
+    color: white;
+  }
+  .button:focus{
+    outline: none;
+  }
+  .content-wrapper{
+    width: 100%;
+    position: unset;
+    height: 100%;
+  }
+  h1{
+    color: white;
+  }
+  mat-sidenav{
+    height: 100%;
+  }
+  mat-sidenav-content{
+    height: 100%;
+  }
+  .example-sidenav-container{
+    position: absolute; 
+    top: 65px;
+    bottom: 0px; 
+    width: 100%;
+    height: 85%;
+  }
+  .footerStyle{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4285f4 !important;
+    color: white;
+    text-align: center;
+    height: 6%;
+  }
+  .footer_span{
+    font-size: 21px;
+    display: flex;
+    float: right;
+    font-weight: 600;
+    padding-right: 5%;
+  }

@@ -1,0 +1,215 @@
+.mat-input-element:disabled{
+    color: rgb(0, 0, 0);
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+.layOut{
+  padding-top: 20px;
+  .text_placeholder{
+    color: rgba(0,0,0,.7);
+    font-size: 15px; 
+    font-weight: bold;
+}
+mat-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+.slider_label{
+  // height: 22px;
+  // padding: 13px;
+  display: flex;
+  color: rgba(0,0,0,.7);
+  font-size: 15px; 
+  font-weight: bold;
+  justify-content: center;
+  margin: auto;
+}
+mat-slider{
+  display: flex;
+}
+.button {
+  /* background-color: green; */
+  background-color:#4285f4;
+  color: white;
+  width: 40%;
+  border-radius: 16px;
+  height: 41px;
+  max-width: 37%;
+  min-width: 32%;
+}
+.button_refresh{
+  background-color:#25992f;
+  color: white;
+  width: 40%;
+  border-radius: 16px;
+  height: 41px;
+  max-width: 37%;
+  min-width: 32%;
+}
+}
+
+ngb-rating {
+  color: #FFC107;
+  font-size: 20px;
+}
+mat-card{
+  background-color: rgb(204, 231, 255);
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  font-size: 20px;
+  font-weight: 600;
+  }
+  .spanRight{
+    float: right;
+  }
+  .card{
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    height: 170px;
+    background-color:white;
+    width: 40%;
+    height: 138px;
+    display: -webkit-inline-box;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+     min-width: 40%;
+    // max-width: 50%;
+    display: block;
+  }
+
+.cardHolder{
+  padding:20px;
+  .card{
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    height: 170px;
+    background-color:white;
+    width: 40%;
+    height: 138px;
+    display: -webkit-inline-box;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+     min-width: 40%;
+    // max-width: 50%;
+    display: block;
+    .dataHolder{
+      display: flex;
+      height: 80px;
+      .timeHolder{
+        width: 43%; 
+        height: 50%; 
+        padding-top: 3%;
+      }
+      .icon{
+        height: 89px;
+          padding-top: 20px;
+          width: 100%;
+      }
+      .label{
+        display: block;
+        padding-top: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+      }
+    }
+    .total{
+      margin: 2%;
+      .totalValue{
+        font-size: 18px;
+        padding-right: 26px;
+        font-weight: 700;
+      }
+      .button_change{
+        float: right;
+        background-color:#25992f;
+        color: white;
+        width: 40%;
+        border-radius: 10px;
+        height: 35px;
+        max-width: 20%;
+        min-width: 20%;
+        margin: 0px 14px 10px 0px;
+      }
+      .button_Not_Available{
+        float: right;
+        background-color:#a02f41;
+        color: white;
+        width: 40%;
+        border-radius: 10px;
+        height: 35px;
+        max-width: 20%;
+        min-width: 20%;
+        margin: 0px 14px 10px 0px;
+      }
+     }
+  }
+  .glow-Card:hover{
+    box-shadow: 0 5px 15px rgba(4, 73, 221, 0.4);
+    color: black;
+  }
+}
+ 
+    @media only screen and (max-width:774px){
+      .cardHolder{
+      .card{
+        display: block;
+        width: 100%;
+        flex: none; 
+        // box-sizing: border-box;
+        .total{
+          .button_change{
+            min-width: 30%;
+          }
+          .button_Not_Available{
+            min-width: 30%;
+          }
+        }
+      }
+    }
+      mat-card-actions{
+        width: 95%;
+        .button {
+          float: right;
+          min-width: 70%;
+        }
+        .button_refresh{
+          float: right;
+          min-width: 70%;
+        }
+      }
+     
+.button_Not_Available{
+  min-width: 20%;
+}
+    }
+    @media only screen and (max-width:320px){
+      .cardHolder{
+        padding: 0%;
+        .card{
+          width: 100%;
+        }
+      }
+    }
+    @media only screen and (max-width:1172px){
+      .cardHolder{
+        .card{
+          .total{
+            .button_change{
+              min-width: 30%;
+            }
+            .button_Not_Available{
+              min-width: 30%;
+            }
+          }
+        }
+      }
+    }

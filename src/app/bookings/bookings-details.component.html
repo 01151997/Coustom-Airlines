@@ -1,0 +1,69 @@
+
+<div>
+    <mat-card>
+        <mat-card-content>
+            <mat-tab-group mat-stretch-tabs>
+                <mat-tab label='New Booking'>
+                    <form [formGroup]='searchForm'>
+                        <div class="layOut" fxLayout="row wrap" fxLayoutAlign="space-evenly">
+
+                            <mat-form-field appearance="outline" fxFlex="48%" fxFlex.gt-sm="18%">
+                                <mat-label class="text_placeholder">Departure</mat-label>
+                                <input matInput placeholder="Enter Departure" formControlName='departure'>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="48%" fxFlex.gt-sm="18%">
+                                <mat-label class="text_placeholder">Arrival</mat-label>
+                                <input matInput placeholder="Enter Arrival" formControlName='arrival'>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" fxFlex="48%" fxFlex.gt-sm="18%">
+                                <mat-label class="text_placeholder">Choose a date</mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName='date'>
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                         <div  fxFlex="48%" fxFlex.gt-sm="18%">
+                            <label class="slider_label"  >Cost of Ticket</label>
+                                <mat-slider  thumbLabel formControlName='slider' [displayWith]="formatLabel" tickInterval="1000" step="1000" min="0"
+                                    max="100000" aria-label="units"></mat-slider>  
+                         </div>
+                               
+                                    <mat-card-actions fxFlex="48%" fxFlex.gt-sm="18%">
+                                            <button mat-raised-button class="button" (click)='onSearch()'>Search</button>
+                                            <button mat-raised-button class="button_refresh" (click)='onRefresh()'>Refresh</button>
+                                    </mat-card-actions>
+                          
+                        </div>
+                    </form>
+                    <div class="cardHolder"  fxLayout="row wrap" fxLayoutAlign="space-evenly">
+                        <h1 *ngIf='valueNotFound'>No Records Found </h1>
+                        <div class="card glow-Card" *ngFor = "let workList of  workList ">
+                            <div class="dataHolder">
+                                <div style="width: 25%;">
+                                    <img class="icon" src="../../assets/img/image2.jpg">
+                                </div>
+                                <div style="width: 26%;">
+                                    <label class="label">Custom Airline</label>
+                                    <ngb-rating [max]="5" [(rate)]="workList.rating" [readonly]="true"></ngb-rating>
+                                </div>
+                                <div class="timeHolder">
+                                    <span class="spanLeft">{{workList.startTime}}</span>   <span class="spanRight">{{workList.endTime}} </span>
+                                        <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                                    <span>{{workList.departure}} </span>   <span class="spanRight">{{workList.arrival}}</span>
+                                </div>
+                            </div>
+                            <div class="total"> 
+                                <span class="totalValue">{{workList.Cost | currency:'INR':true}}</span>
+                                <button mat-raised-button *ngIf = "workList.status === 'Available' " class="button_change">Available</button>
+                                <button mat-raised-button *ngIf = "workList.status !== 'Available' " class="button_Not_Available">Not Available</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label='Past Booking'></mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>  
+</div>
+
